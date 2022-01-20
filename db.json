@@ -1,0 +1,73 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "KOLON SPORT",
+      "title": "YOUR BEST WAY TO NATURE",
+      "description": "코오롱스포츠는 1973년 자연 속에서 모험과 도전을 즐기기 위해 탄생한 대한민국을 대표하는 아웃도어 브랜드입니다.\n\n반세기 동안 끊임없는 연구개발과 체험활동을 통해 자연과 공존하는 즐거움을 선사합니다.\n\n코오롱스포츠는 당신의 꿈을 현실로 만들고 위대한 순간을 선물합니다.\n\nTrust KOLON SPORT",
+      "image": "https://images3.kolonmall.com/upload/f7bc153a-9c37-427e-ae6a-2069238bb040/ac8b5c48-db9c-42d8-94c8-b2aa1299e7ae.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/f7bc153a-9c37-427e-ae6a-2069238bb040/ac8b5c48-db9c-42d8-94c8-b2aa1299e7ae.jpg"
+    },
+    {
+      "id": 2,
+      "name": "CUSTOMELLOW",
+      "title": "'흥미로운 옷 입기'를 탐구하는 레트로 컨템포러리 브랜드",
+      "description": "customellow / BIOGRAPHY\nCUSTOM + MELLOW = CUSTOMELLOW\n\n 커스텀멜로우는 딱딱함(CUSTOM)과 말랑함(MELLOW),\n상반된 두 가지 개념이 믹스된 이름처럼 클래식의 재해석과 일상의 재발견을 통해\n\"흥미로운 옷 입기\"를 탐구하는 레트로 컨템포러리 브랜드입니다\n\n또한 패션과 문화의 복합적인 시도를 바탕으로\n시공간을 초월한 가치와 동시대를 살아가는 젊은 예술가들과의 깊이 있는\n교류를 시도하며 우리의 삶이 더욱 풍성해질 수 있도록 노력하고 있습니다.",
+      "image": "https://images3.kolonmall.com/upload/0711cb9e-814d-4942-a9c5-eec7757dcbf1/m-tit-2109.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/0711cb9e-814d-4942-a9c5-eec7757dcbf1/m-tit-2109.jpg"
+    },
+    {
+      "id": 3,
+      "name": "24/7",
+      "url": "https://www.kolonmall.com/247",
+      "title": "24시간 7일 편안함을 입는다",
+      "description": "24시간 7일 편안함을 입는다라는 콘셉트로 전개 중인 24/7 series\nINDOOR와 OUTDOOR에서 범용적으로 활용 가능한 아이템들을 제안합니다.\n\n편안한 삶을 구성하는 요소\n사람, 공간, 일상을 고려하여 우리는 브랜드를 만들어 가고 있습니다.",
+      "image": "https://images3.kolonmall.com/upload/b14b169b-a2e3-44f9-9b26-1894c119b109/03484216-7ae8-4fd2-95ed-b49eeb443fbe.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/b14b169b-a2e3-44f9-9b26-1894c119b109/03484216-7ae8-4fd2-95ed-b49eeb443fbe.jpg"
+    },
+    {
+      "id": 4,
+      "name": "AMOUPRE",
+      "url": "http://lebreadlab.net",
+      "description": "\u2018amoupre\u2019 는 나 스스로의 능력과 가치에 믿음과 자신감을 갖는 것으로부터 시작합니다.\n\nself-esteem, self-respect 의 의미를 담고있는 프랑스어 'amour propre' 의 뜻을 가집니다. 미니멀하고 정갈한 디테일과 체형에 꼭 맞는 군더더기 없는 핏감으로 입는 사람으로 하여금 자연스러운 자신만의 멋을 지닐 수 있도록 센스있는 매일의 룩을 추구합니다.",
+      "image": "https://images3.kolonmall.com/upload/brand/c3702cc2-3fbd-47e0-82f4-a136a33aea69/fb4d6b3e-0f86-47cc-8bf8-b4966f19066c.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/brand/c3702cc2-3fbd-47e0-82f4-a136a33aea69/fb4d6b3e-0f86-47cc-8bf8-b4966f19066c.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Likewise",
+      "url": "https://www.kolonmall.com/Likewise/List/133021000183",
+      "title": "LIKE YOUR WISE BEAUTY",
+      "description": "보여주기 식의 화려한 겉모습 보다 스스로 건강하게 변하는 피부를 체감할 수 있는 개선 효과.\n내가 누구인지, 내가 바라는 것은 무엇인지 모든 것이 명쾌하고 영리한 나를 닮은 피부 생활 습관.\n라이크와이즈가 와이즈한 뷰티 라이프로 당신을 초대합니다.",
+      "image": "https://images3.kolonmall.com/upload/brand/38b04cc1-2016-470a-a3bf-6098aab491d4/6d382756-161d-4e2b-b3ee-248f3b00ce89.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/brand/38b04cc1-2016-470a-a3bf-6098aab491d4/6d382756-161d-4e2b-b3ee-248f3b00ce89.jpg"
+    },
+    {
+      "id": 6,
+      "name": "M_CURIE",
+      "url": "http://www.milkcowinboots.co.kr",
+      "title": "M_CURIE",
+      "description": "M_CURIE, Innovative Performance 스킨케어는 독자적인 MTD 기술을 통해\n더욱 도전적이며 당당함으로 가득한 삶을 실현할 수 있도록 하이 스킨 솔루션을 제안합니다.\n과학적으로 입증된 효능을 통한 엠퀴리만의 혁신적인 안티에이징 기술을 지금 경험해보세요.",
+      "image": "https://images3.kolonmall.com/upload/df1febde-f797-4a04-9c34-2bef1afd2177/024081f3-610e-4356-8718-4555600568d5.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/df1febde-f797-4a04-9c34-2bef1afd2177/024081f3-610e-4356-8718-4555600568d5.jpg"
+    },
+    {
+      "id": 7,
+      "name": "WAAC",
+      "url": "https://www.kolonmall.com/WAAC",
+      "title": "WIN AT ALL COSTS! WAAC",
+      "description": "골퍼를 위해 그리고 골퍼에 의해서 만들어진 골프 어패럴 브랜드.\n브랜드 이름과 같이 모든 골퍼에게 승리를 꿈꾸게 하고자 한다.\n\nWIN AT ALL COSTS의 약자 WAAC은 \"Wag it!\"\n(꾀를 부려 수업을 빠짐) 이라는 숙어에서 파생되어,\n승리를 꿈꾸는 꾀 많은 아이의 마음을 담았다.\n\n상대방의 집중력을 흐리게 하여 승리하겠다는 엉뚱한 발상으로 골프에 대한 보수적인 고정관념을 새롭게\n재해석하여, 즐겁고 건강한 스포츠로 만들고자 한다.\n\nWAAC은 차별화된 그래픽과 위트 있는 디테일을\n현대적으로 해석한 디자인을 제안한다.",
+      "image": "https://images3.kolonmall.com/upload/77bdcc69-cad4-49af-891e-221fa8d97c71/45512b3b-3979-4d4c-b580-c720fa915888.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/77bdcc69-cad4-49af-891e-221fa8d97c71/45512b3b-3979-4d4c-b580-c720fa915888.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Boldest",
+      "url": "https://www.kolonmall.com/boldest",
+      "title": "워커와 함께 만드는 리얼 워크웨어",
+      "description": "볼디스트는 각 산업분야에서 실제 일하는 작업자들과\n함께 상품을 연구 개발하여\n워크웨어의 전문성 강화 및 작업(work)이 가진 \n높은 가치를 상품으로 표현합니다.\n\n또한 시장내 기존 워크웨어와는 차별화 되는 \n고기능성 소재와 전문적인 디자인을 바탕으로 \n워크웨어의 수준을 한 단계 높였습니다.\n\n워커들의 옷을 향한 끝없는 탐구, \n워커와 함께 만드는 리얼 워크웨어",
+      "image": "https://images3.kolonmall.com/upload/brand/0b5f258e-5604-4fc1-89fa-5ca9b48c7df6/68d4de63-2dd6-4f17-be46-5dc0c06f6be6.jpg",
+      "thumb": "https://images3.kolonmall.com/upload/brand/0b5f258e-5604-4fc1-89fa-5ca9b48c7df6/68d4de63-2dd6-4f17-be46-5dc0c06f6be6.jpg"
+    }
+  ]
+}

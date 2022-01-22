@@ -5,6 +5,9 @@
 ```
 npm install
 npm install -g ts-node
+cd ios
+pod install
+cd ..
 npm run ios
 //혹은
 npm run android

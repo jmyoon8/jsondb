@@ -7,6 +7,7 @@ export interface StoresType {
   description: string;
   image: string;
   thumb: string;
+  url?: string;
 }
 
 export type dimentionType = {screen: ScaledSize};

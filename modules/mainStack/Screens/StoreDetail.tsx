@@ -3,6 +3,7 @@ import {
   Alert,
   Dimensions,
   Image,
+  Linking,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -22,6 +23,16 @@ const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
   const [storeInfo, setStoreInfo] = useState<StoresType>();
   const [isOrientChange, setIsOrientChange] = useState<'garo' | 'sero'>('sero');
   const isFocus = useIsFocused();
+  const goToBack = () => {
+    navigation.goBack();
+  };
+  const goToLink = (url: string | undefined) => {
+    if (url) {
+      Linking.openURL(url);
+    } else {
+      Alert.alert('링크가 유효하지 않습니다.');
+    }
+  };
   useEffect(() => {
     const getDetail = async () => {
       try {
@@ -54,12 +65,7 @@ const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <View
-          style={{
-            alignItems: 'center',
-            flex: 1,
-            paddingBottom: 80,
-          }}>
+        <View style={styles.storeInfoContainer}>
           <Image
             source={{uri: storeInfo?.image}}
             resizeMode="stretch"
@@ -78,11 +84,30 @@ const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
           </View>
         </View>
       </ScrollView>
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={styles.backButton}>
-        <Icon name="arrowleft" type="antdesign" />
-      </TouchableOpacity>
+      <View
+        style={{
+          bottom: 50,
+          position: 'absolute',
+
+          width: '100%',
+          alignSelf: 'center',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingHorizontal: 26,
+        }}>
+        <TouchableOpacity onPress={goToBack} style={styles.backButton}>
+          <Icon name="arrowleft" type="antdesign" />
+        </TouchableOpacity>
+
+        {storeInfo?.url ? (
+          <TouchableOpacity
+            onPress={() => goToLink(storeInfo.url)}
+            style={styles.backButton}>
+            <Icon name="world" type="fontisto" />
+          </TouchableOpacity>
+        ) : null}
+      </View>
     </SafeAreaView>
   );
 };
@@ -95,9 +120,12 @@ const styles = StyleSheet.create({
     backgroundColor: whiteBackGround,
     padding: 1,
   },
+  storeInfoContainer: {
+    alignItems: 'center',
+    flex: 1,
+    paddingBottom: 100,
+  },
   backButton: {
-    bottom: 50,
-    left: 26,
     width: 50,
     height: 50,
     borderRadius: 50,

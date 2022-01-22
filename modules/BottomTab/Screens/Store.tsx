@@ -7,6 +7,7 @@ import {apiInstance} from '../../utils/globalUtils';
 import {whiteBackGround} from '../../utils/styles';
 import StoreCard from '../components/StoreCard';
 import {dimentionType, StoresType} from '../types/DataType';
+import {useIsFocused} from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   scrollViewContainer: {
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
 const Store = ({navigation, route}: StoreBottomScreenProps) => {
   const [stores, setStores] = useState<StoresType[]>([]);
   const [Orient, setOrient] = useState<'garo' | 'sero'>('sero');
-
+  const focus = useIsFocused();
   useLayoutEffect(() => {
     navigation.setOptions({
       header: () => <Header route={route} />,
@@ -37,6 +38,7 @@ const Store = ({navigation, route}: StoreBottomScreenProps) => {
         const getData = await apiInstance.get<StoresType[]>('/stores');
         setStores(getData.data);
       } catch (error) {
+        setStores([]);
         Alert.alert('링크가 유효하지 않습니다.');
         navigation.goBack();
       }
@@ -50,11 +52,13 @@ const Store = ({navigation, route}: StoreBottomScreenProps) => {
       }
     };
     const remove = Dimensions.addEventListener('change', dimentionChange);
-    getStores();
+    if (focus) {
+      getStores();
+    }
     return () => {
       remove.remove();
     };
-  }, [navigation]);
+  }, [navigation, focus]);
 
   return (
     <ScrollView style={styles.scrollViewContainer}>

@@ -16,10 +16,12 @@ import {Icon} from 'react-native-elements/dist/icons/Icon';
 import {apiInstance} from '../../utils/globalUtils';
 import {dimentionType, StoresType} from '../../BottomTab/types/DataType';
 import {ScrollView} from 'react-native-gesture-handler';
+import {useIsFocused} from '@react-navigation/native';
 
 const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
   const [storeInfo, setStoreInfo] = useState<StoresType>();
   const [isOrientChange, setIsOrientChange] = useState<'garo' | 'sero'>('sero');
+  const isFocus = useIsFocused();
   useEffect(() => {
     const getDetail = async () => {
       try {
@@ -29,6 +31,7 @@ const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
         setStoreInfo(getData.data);
       } catch (error) {
         Alert.alert('링크가 유효하지 않습니다.');
+        setStoreInfo(undefined);
         navigation.goBack();
       }
     };
@@ -39,12 +42,14 @@ const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
         setIsOrientChange('garo');
       }
     };
+    if (isFocus) {
+      getDetail();
+    }
     const remove = Dimensions.addEventListener('change', dimentionChange);
-    getDetail();
     return () => {
       remove.remove();
     };
-  }, [navigation, route.params.id]);
+  }, [navigation, route.params.id, isFocus]);
 
   return (
     <SafeAreaView style={styles.container}>

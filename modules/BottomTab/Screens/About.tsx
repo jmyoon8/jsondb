@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   contentBox: {
-    flex: 0.5,
+    flex: 0.8,
     justifyContent: 'space-between',
   },
   contentFont: {
@@ -47,6 +47,16 @@ const About = ({navigation, route}: AboutBottomScreenProps) => {
         <Text style={styles.contentFont}>또한 이런 좋은 기회를 주심에</Text>
         <Text style={styles.contentFont}>감사드립니다.</Text>
 
+        <Text style={styles.contentFont}>제출한 면접과제는</Text>
+        <Text style={styles.contentFont}>요구사항을 모두 구현했고</Text>
+        <Text style={styles.contentFont}>
+          추가 과제인 landScape지원도 완료하였습니다.
+        </Text>
+        <Text style={styles.contentFont}>
+          공통 테스트 또한 필수/선택 테스트를 모두
+        </Text>
+        <Text style={styles.contentFont}>완료하였습니다.</Text>
+        <Text style={styles.contentFont}>감사합니다!</Text>
         <Icon
           reverse
           name="heart"

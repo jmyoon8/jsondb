@@ -14,6 +14,7 @@ import StackNavigation from './modules/mainStack/StackNavigation';
 import {NavigationContainer} from '@react-navigation/native';
 import 'react-native-gesture-handler';
 import {LogBox} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
   LogBox.ignoreLogs([
@@ -21,7 +22,9 @@ const App = () => {
   ]);
   return (
     <NavigationContainer>
-      <StackNavigation />
+      <SafeAreaProvider>
+        <StackNavigation />
+      </SafeAreaProvider>
     </NavigationContainer>
   );
 };

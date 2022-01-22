@@ -1,27 +1,30 @@
-import {StyleSheet, Text, View, ScrollView, FlatList} from 'react-native';
+import {StyleSheet, View, ScrollView, Dimensions, Alert} from 'react-native';
 import React, {useEffect, useLayoutEffect, useState} from 'react';
 import {StoreBottomScreenProps} from '../types/bottomNavigationType';
 import Header from '../components/Header';
 import {apiInstance} from '../../utils/globalUtils';
-import {StoresType} from '../../utils/globalType';
+
 import {whiteBackGround} from '../../utils/styles';
+import StoreCard from '../components/StoreCard';
+import {dimentionType, StoresType} from '../types/DataType';
 
 const styles = StyleSheet.create({
-  container: {
+  scrollViewContainer: {
     flex: 1,
     backgroundColor: whiteBackGround,
     flexWrap: 'wrap',
-    borderWidth: 1,
   },
-  storesContainer: {
-    borderWidth: 1,
-    height: 40,
-    width: '100%',
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingTop: 14,
   },
 });
 
 const Store = ({navigation, route}: StoreBottomScreenProps) => {
   const [stores, setStores] = useState<StoresType[]>([]);
+  const [Orient, setOrient] = useState<'garo' | 'sero'>('sero');
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -30,25 +33,44 @@ const Store = ({navigation, route}: StoreBottomScreenProps) => {
   }, [navigation, route]);
   useEffect(() => {
     const getStores = async () => {
-      const getData = await apiInstance.get<StoresType[]>('/stores');
-      setStores(getData.data);
+      try {
+        const getData = await apiInstance.get<StoresType[]>('/stores');
+        setStores(getData.data);
+      } catch (error) {
+        Alert.alert('링크가 유효하지 않습니다.');
+        navigation.goBack();
+      }
     };
+
+    const dimentionChange = ({screen}: dimentionType) => {
+      if (screen.height > screen.width) {
+        setOrient('sero');
+      } else {
+        setOrient('garo');
+      }
+    };
+    const remove = Dimensions.addEventListener('change', dimentionChange);
     getStores();
-  }, []);
+    return () => {
+      remove.remove();
+    };
+  }, [navigation]);
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={stores}
-        style={{width: '100%', borderWidth: 1}}
-        horizontal
-        keyExtractor={item => item.id + 'Key!'}
-        renderItem={({index, item}) => (
-          <View style={styles.storesContainer}></View>
-        )}
-      />
-      <Text>{stores.length}</Text>
-    </View>
+    <ScrollView style={styles.scrollViewContainer}>
+      <View style={styles.container}>
+        {stores.map(item => {
+          return (
+            <StoreCard
+              key={item.id + 'stores'}
+              {...item}
+              navigation={navigation}
+              Orient={Orient}
+            />
+          );
+        })}
+      </View>
+    </ScrollView>
   );
 };
 

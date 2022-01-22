@@ -35,14 +35,18 @@ const About = ({navigation, route}: AboutBottomScreenProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.contentBox}>
-        <Text style={styles.contentFont}>안녕하세요 지원자 윤재진 입니다.</Text>
         <Text style={styles.contentFont}>
-          저를 좋게 봐주셔서 좋은 기회를 주심에
+          안녕하세요! 지원자 윤재진 입니다.
         </Text>
-        <Text style={styles.contentFont}>감사드립니다.</Text>
         <Text style={styles.contentFont}>면접 과제를 통해 이렇게 앱상에서</Text>
         <Text style={styles.contentFont}>먼저 인사드리게 되었습니다.</Text>
-        <Text style={styles.contentFont}>잘부탁드립니다.</Text>
+        <Text style={styles.contentFont}>
+          좋은 결과를 얻어 대면 면접에서 다시한번
+        </Text>
+        <Text style={styles.contentFont}>인사 드릴수 있었으면 좋겠습니다.</Text>
+        <Text style={styles.contentFont}>또한 이런 좋은 기회를 주심에</Text>
+        <Text style={styles.contentFont}>감사드립니다.</Text>
+
         <Icon
           reverse
           name="heart"

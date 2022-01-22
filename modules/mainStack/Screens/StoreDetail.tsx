@@ -26,9 +26,14 @@ const StoreDetail = ({navigation, route}: StoreDetailScreenProps) => {
   const goToBack = () => {
     navigation.goBack();
   };
-  const goToLink = (url: string | undefined) => {
+  const goToLink = async (url: string | undefined) => {
     if (url) {
-      Linking.openURL(url);
+      const canOpen = await Linking.canOpenURL(url);
+      if (canOpen) {
+        Linking.openURL(url);
+      } else {
+        Alert.alert('링크가 유효하지 않습니다.');
+      }
     } else {
       Alert.alert('링크가 유효하지 않습니다.');
     }
